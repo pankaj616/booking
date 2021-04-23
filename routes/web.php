@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+Route::redirect('/register', '/home', 301);
 
 Auth::routes();
 
@@ -35,6 +36,7 @@ Route::group([
     'middleware' => ['auth:admin'],
 ], function () {
     Route::get('/dashboard', 'AdminController@index')->name('admin');
+    Route::post('/check-leave', 'AdminController@checkLeaves')->name('admin.checkLeaves');
     Route::get('/departments', 'DepartmentController@index')->name('admin.departments');
     Route::get('/department/{id}', 'DepartmentController@view')->name('admin.departmentView');
     Route::get('/roles', 'RoleController@index')->name('admin.roles');
