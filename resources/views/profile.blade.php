@@ -73,13 +73,13 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="created_at" class="col-5 col-form-label">city</label>
+                    <label for="created_at" class="col-5 col-form-label">City</label>
                     <div class="col-7">
                         <span> {{$employee->address->city}} </span>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="created_at" class="col-5 col-form-label">state</label>
+                    <label for="created_at" class="col-5 col-form-label">State</label>
                     <div class="col-7">
                         <span> {{$employee->address->state}} </span>
                     </div>
