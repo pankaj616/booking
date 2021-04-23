@@ -20,9 +20,9 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @forelse ($leaves as $leave)
+                                @forelse ($leaves as $key => $leave)
                                     <tr>
-                                        <td>{{ $leave->id }}</td>
+                                        <td>{{ $key + 1 }}</td>
                                         <td>{{ $leave->date_of_leave }}</td>
                                         <td>{{ ($leave->status ? $leave->status : 'Pending') }}</td>
                                         <td class="text-center py-0 align-middle">
